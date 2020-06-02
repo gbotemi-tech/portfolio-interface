@@ -12,9 +12,8 @@ body {
     float: left;
     width: 34%;
     min-height: 100vh;
-    background: #11998e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #31d19c, #17997d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #05b993;
+    background-image: url("https://devcareer.io/images/bg.svg");
 }
 
 .appearance .visible {
