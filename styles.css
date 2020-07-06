@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    transition: background  0.6s linear;
+}
+
+/* Toogle */
+.toggle {
+    display: flex;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    margin-left: 28%;
+}
+
+body.dark {
+    background-color: #292c35;
+    color: #fff;
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.label {
+    background: #215;
+    width: 50px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 3px;
+}
+
+.ball {
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    border-radius: 50%;
+    transition: transform 0.3s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(23px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+/*Toggle ends*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+@media (max-width:1000px) {
+    body {
+        overflow-x: hidden;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .toggle {
+        margin-left: 2%;
+    }
+    .appearance {
+        width: 100vw !important;
+    }
+    .appearance .visible .image img {
+        margin-top: 0px !important;
+        margin-bottom: 10px;
+        width: 60vw !important;
+        height: 70vh;
+    }
+    .appearance .visible .description a{
+        padding: 20px 100px !important;
+    }
+    .details {
+        width: 100vw !important;
+    }
+    .details .links p {
+        margin: 30px !important;
+    }
+}
+
+@media (max-width:800px) {  
+    .portfolio {
+        width: 550px !important;
+    }
+}
+
+@media (max-width:600px) {
+    .details .links p {
+        text-align: center !important;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }    
+    .portfolio {
+        width: 400px !important;
+    }
+    .appearance .visible .name {
+        display: inherit !important;
+    }
+}
+
+@media (max-width:500px) {
+    .appearance{
+        width: 100% !important;
+    }
+    .appearance .visible .image img {
+        width: 58vw !important;
+        height: 57vh;
+    }
+    .appearance .visible .description a{
+        padding: 18px 60px !important;
+    }
+}
+
+.appearance {
+    width: 34%;
+    min-height: 100vh;
+    background-color: #05b993;
+    background-image: url("https://devcareer.io/images/bg.svg");
+}
+
+.appearance .visible {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appearance .visible .image img {
+    border: 5px solid #efefef;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 100%; 
+}
+
+.appearance .visible .name {
+    display: none;
+    font-size: 30px;
+    margin: -10px 0px 0px 0px;
+
+}
+
+.appearance .visible .description a{
+    background-color: #efe;
+    padding: 18px 76px;
+    border: none;
+    border-radius: 2px;
+    color: #000;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.appearance .visible .description a:hover {
+    background-color: #3c3c3c;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*Details Section*/
+.details {
+    width: 66%;
+    min-height: 100vh;
+}
+
+.details .links p {
+    margin: 15px;
+    font-size: 15px;
+    text-align: right;
+}
+
+.details .links p span {
+    color: gold;
+    font-weight: bold;
+}
+
+.details .links a {
+    color: #111;
+    text-decoration: none;
+}
+
+.details .links p a:hover {
+    text-decoration: none;
+}
+
+.details .links i {
+    font-size: 13px;
+}
+
+.portfolio {
+    width: 630px;
+    margin: 65px 0px 0px 75px;
+}
+
+.portfolio .skills {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.portfolio .skills p {
+    background: #595959;
+    padding: 2px 15px;
+    color: #efe;
+    border-radius: 3px;
+}
+
+.portfolio .hobby {
+    border-top: 5px solid #31d19c;
+    padding-top: 15px;
+}
+
+.portfolio .follow {
+    margin-top: 50px;
+}
+
+.portfolio .follow a i {
+    font-size: 35px;
+    letter-spacing: 20px;
+    margin-top: 10px;
+}
+
+.portfolio .follow a i.fa-facebook-square {
+    color: #3b5998;
+}
+
+.portfolio .follow a i.fa-github-square{
+    color: #211F1F;
+}
+
+.portfolio .follow a i.fa-instagram {
+    color: #E1306C;
+}
+
+.portfolio .follow a i.fa-linkedin {
+    color: #0e76a8;
+}
+
+.portfolio .follow a i.fa-medium {
+    color: #3cb371;
+}
+
+.portfolio .follow a i.fa-twitter-square {
+    color: #00acee;
+}
